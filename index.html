@@ -2,63 +2,226 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Jonás De Martín – Data Scientist & AI Engineer</title>
+  <title>Jonás De Martín – Data Science & AI Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Bootstrap CDN para maquetar rápido -->
+
+  <!-- Bootstrap -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
+
   <style>
+    :root {
+      --primary: #0d6efd;
+      --secondary: #0b1630;
+    }
+
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      scroll-behavior: smooth;
     }
+
+    /* NAVBAR */
     nav.navbar {
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+      background: #ffffffd9;
+      backdrop-filter: blur(10px);
     }
+
+    nav .nav-link {
+      font-weight: 500;
+      margin-left: 8px;
+    }
+
+    nav .nav-link:hover {
+      color: var(--primary);
+    }
+
     section {
       padding: 80px 0;
     }
+
+    /* HERO */
     .hero-section {
       min-height: 80vh;
       display: flex;
       align-items: center;
       text-align: center;
+      background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 50%, #edf3ff 100%);
     }
+
     .hero-img {
       width: 220px;
       height: 220px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.20);
+      border: 4px solid #fff;
     }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      color: #4b5563;
+      font-size: 1.1rem;
+    }
+
+    .hero-pill {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #e9f2ff;
+      color: #2563eb;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .btn-cta {
+      border-radius: 999px;
+      padding-inline: 22px;
+      font-weight: 600;
+    }
+
     .section-title {
       font-weight: 700;
       margin-bottom: 32px;
       text-align: center;
+      color: var(--secondary);
     }
-    .badge-skill {
-      margin: 4px;
-      padding: 8px 14px;
+
+    /* ABOUT */
+    #about p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* TECH STACK TABLE */
+    #tech {
+      background: #f5f7fb;
+    }
+
+    .tech-table {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    .tech-table thead tr {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .tech-table th,
+    .tech-table td {
+      padding: 14px 16px;
+      vertical-align: middle;
+    }
+
+    .tech-table tbody tr:nth-child(even) {
+      background: #f9fbff;
+    }
+
+    .tech-table tbody tr:hover {
+      background: #eaf1ff;
+      transition: background 0.18s ease-in-out;
+    }
+
+    .tech-area {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    /* PROJECT CARDS */
+    #projects {
+      background: #ffffff;
+    }
+
+    .project-card {
+      border-radius: 14px;
+      border: none;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      height: 100%;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.16);
+    }
+
+    .project-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 4px 10px;
       border-radius: 999px;
-      background: #f5f5f5;
-      font-size: 0.9rem;
+      background: #eff6ff;
+      color: #1d4ed8;
+      margin-right: 6px;
+      margin-bottom: 6px;
     }
+
+    /* SKILLS LIST */
+    #skills {
+      background: #f9fafb;
+    }
+
+    #skills ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    #skills li::before {
+      content: "●";
+      color: var(--primary);
+      margin-right: 8px;
+      font-size: 0.8rem;
+    }
+
+    /* CONTACT */
+    #contact a {
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
     footer {
-      padding: 30px 0;
+      padding: 24px 0;
       text-align: center;
-      background: #f8f9fa;
+      background: #0b1120;
+      color: #e5e7eb;
+      font-size: 0.85rem;
       margin-top: 40px;
-      font-size: 0.9rem;
     }
-    a {
-      text-decoration: none;
+
+    footer a {
+      color: #93c5fd;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      section {
+        padding: 64px 0;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-white fixed-top">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#home">Portfolio</a>
       <button
@@ -82,112 +245,160 @@
     </div>
   </nav>
 
-  <!-- Home / Hero -->
+  <!-- HERO -->
   <section id="home" class="hero-section">
     <div class="container">
-      <h1 class="mb-4">Meet Jonás</h1>
-      <img
-        src="TU_FOTO_AQUI.jpg"
-        alt="Jonás De Martín"
-        class="hero-img mb-4"
-      />
-      <p class="lead mx-auto" style="max-width: 800px;">
-        I’m a <strong>Data Scientist & AI Engineer</strong> with a hybrid background in
-        <strong>Education, Psychology and Data Science</strong>. I specialize in
-        <strong>Machine Learning, NLP, Generative AI, RAG systems and intelligent automation</strong>,
-        turning data and documents into actionable insights and real business value.
-      </p>
-      <p class="mx-auto" style="max-width: 800px;">
-        I enjoy building end-to-end solutions: from data pipelines and analytics to AI agents and
-        chatbots that solve real problems in sectors like education, insurance and SaaS products.
-      </p>
+      <div class="row justify-content-center align-items-center g-4">
+        <div class="col-lg-4 text-center">
+          <!-- 🔁 CAMBIA src POR EL NOMBRE DE TU FOTO SUBIDA AL REPO -->
+          <img
+            src="foto-jonas.jpg"
+            alt="Jonás De Martín"
+            class="hero-img mb-3"
+          />
+        </div>
+        <div class="col-lg-6 text-lg-start text-center">
+          <div class="hero-pill">Data Science · AI · Automation</div>
+          <h1 class="hero-title">Meet Jonás</h1>
+          <p class="hero-subtitle mb-3">
+            Data Scientist & AI Engineer with a hybrid background in education, psychopedagogy
+            and business analytics. I design data and AI solutions that turn complex information
+            into clear, actionable insights.
+          </p>
+          <p class="hero-subtitle">
+            I enjoy building end-to-end products: from data pipelines and analytics to AI agents,
+            chatbots and automation workflows that deliver real value in sectors like education,
+            insurance and SaaS.
+          </p>
+          <div class="mt-4">
+            <a href="#projects" class="btn btn-primary btn-cta me-2">View Projects</a>
+            <a href="#contact" class="btn btn-outline-primary btn-cta">Contact me</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- ABOUT -->
   <section id="about">
     <div class="container">
       <h2 class="section-title">About</h2>
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <p>
-            I hold a <strong>Master’s Degree in Data Science, Big Data & Business Analytics</strong>
-            from Universidad Complutense de Madrid, with a final grade of <strong>9.56/10</strong> and
-            a <strong>3rd Prize for Best Master Thesis 2025</strong> for developing a
-            <strong>RAG system</strong> applied to automated contract analysis (ADIF & AENA).
+            I hold a <strong>Master’s Degree in Data Science, Big Data &amp; Business Analytics</strong>
+            from Universidad Complutense de Madrid, completed with a final grade of
+            <strong>9.56/10</strong> and awarded the <strong>3rd Prize for Best Master Thesis 2025</strong>
+            for developing a Retrieval-Augmented Generation (RAG) system for automated contract
+            analysis in collaboration with public companies (ADIF &amp; AENA).
           </p>
           <p>
-            My previous background as a <strongPsychopedagogue and Educator</strong> helps me explain
-            complex technical concepts clearly, collaborate with multidisciplinary teams and align AI
-            solutions with real user needs and business goals.
+            My previous career as a <strong>Psychopedagogue and Educator</strong> helps me explain
+            complex technical concepts clearly, design user-centred solutions and work effectively
+            with multidisciplinary teams and stakeholders.
           </p>
           <p>
-            I’m currently focused on <strong>LLMs, AI agents, automation pipelines and data-driven
-            products</strong>, especially in remote or hybrid roles where I can contribute to
-            high-impact projects.
+            Today I focus on <strong>Machine Learning, NLP, Generative AI, RAG systems and intelligent
+            automation</strong>, especially in projects where data and AI can create measurable impact
+            for organisations and end-users.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Tech Stack -->
-  <section id="tech" style="background:#f8f9fa;">
+  <!-- TECH STACK -->
+  <section id="tech">
     <div class="container">
       <h2 class="section-title">Tech Stack</h2>
-      <div class="text-center">
-        <div class="badge-skill">Python</div>
-        <div class="badge-skill">SQL</div>
-        <div class="badge-skill">Pandas / NumPy</div>
-        <div class="badge-skill">scikit-learn</div>
-        <div class="badge-skill">PyTorch</div>
-        <div class="badge-skill">TensorFlow</div>
-        <div class="badge-skill">LangChain</div>
-        <div class="badge-skill">LLMs / OpenAI API</div>
-        <div class="badge-skill">RAG Systems</div>
-        <div class="badge-skill">Tableau</div>
-        <div class="badge-skill">Power BI</div>
-        <div class="badge-skill">Snowflake</div>
-        <div class="badge-skill">Airflow</div>
-        <div class="badge-skill">Docker</div>
-        <div class="badge-skill">Git & GitHub</div>
-        <div class="badge-skill">Make / Zapier / n8n</div>
+
+      <div class="table-responsive tech-table mx-auto" style="max-width: 1000px;">
+        <table class="table mb-0">
+          <thead>
+            <tr>
+              <th style="width: 32%;">Area</th>
+              <th>Technologies / Tools</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tech-area">Programming Languages</td>
+              <td>Python, SQL</td>
+            </tr>
+            <tr>
+              <td class="tech-area">Machine Learning Libraries</td>
+              <td>Scikit-learn, H2O AutoML, PyCaret, MLflow, XGBoost, LightGBM, CatBoost, feature-engine, imbalanced-learn</td>
+            </tr>
+            <tr>
+              <td class="tech-area">Deep Learning</td>
+              <td>TensorFlow, Keras, Hugging Face Transformers</td>
+            </tr>
+            <tr>
+              <td class="tech-area">Data Mining and Processing</td>
+              <td>Pandas, NumPy, PySpark, Apache Spark</td>
+            </tr>
+            <tr>
+              <td class="tech-area">Databases</td>
+              <td>SQL, Snowflake, MongoDB, Oracle</td>
+            </tr>
+            <tr>
+              <td class="tech-area">Cloud Computing</td>
+              <td>Microsoft Azure, Azure Databricks</td>
+            </tr>
+            <tr>
+              <td class="tech-area">Data Management / Statistical Analysis</td>
+              <td>Data Wrangling, Data Cleaning, Statistical Analysis, Exploratory Data Analysis (EDA), Hypothesis Testing</td>
+            </tr>
+            <tr>
+              <td class="tech-area">Visualization and Reporting</td>
+              <td>Power BI, Tableau, Microsoft Excel (Advanced), Matplotlib, Seaborn, Plotly</td>
+            </tr>
+            <tr>
+              <td class="tech-area">Development Environment</td>
+              <td>Anaconda3, Jupyter Notebooks, Visual Studio Code, Docker</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <div class="row g-4">
-        <!-- Proyecto 1 -->
+        <!-- Project 1 -->
         <div class="col-md-6">
-          <div class="card h-100 shadow-sm">
+          <div class="card project-card">
             <div class="card-body">
-              <h5 class="card-title">RAG Contract Analysis (Awarded TFM)</h5>
+              <span class="project-tag">RAG · NLP · Contracts</span>
+              <h5 class="card-title mt-2">RAG Contract Analysis (Awarded Master Thesis)</h5>
               <p class="card-text">
-                Retrieval-Augmented Generation system to analyse public contracts from ADIF and AENA
-                (2021–2025). Combines embeddings, vector search and LLMs to answer complex questions
-                over unstructured documents.
+                Retrieval-Augmented Generation system to analyse public contracts from ADIF and AENA.
+                Combines embeddings, vector search and LLMs to answer complex questions over large
+                collections of unstructured documents, improving access to key clauses and insights.
               </p>
               <a href="https://www.youtube.com/watch?v=HsLO7ShzTjA" target="_blank" class="card-link">
                 ▶ Watch demo
               </a>
               <a href="https://github.com/JO-MR" target="_blank" class="card-link">
-                GitHub repo (soon)
+                GitHub (soon)
               </a>
             </div>
           </div>
         </div>
-        <!-- Proyecto 2 -->
+
+        <!-- Project 2 -->
         <div class="col-md-6">
-          <div class="card h-100 shadow-sm">
+          <div class="card project-card">
             <div class="card-body">
-              <h5 class="card-title">AI Agents & Automation for SMEs</h5>
+              <span class="project-tag">AI Agents · Automation</span>
+              <h5 class="card-title mt-2">AI Agents & Automation for SMEs</h5>
               <p class="card-text">
                 Design and implementation of AI agents and automated workflows for SMEs in education
-                and insurance sectors, integrating LLMs, APIs, Make/Zapier and BI dashboards.
+                and insurance sectors, integrating LLMs, APIs, Make/Zapier and BI dashboards to reduce
+                manual work and improve response times.
               </p>
               <a href="https://github.com/JO-MR" target="_blank" class="card-link">
                 GitHub
@@ -195,36 +406,40 @@
             </div>
           </div>
         </div>
-        <!-- Puedes añadir más proyectos repitiendo el bloque col-md-6 -->
+
+        <!-- Puedes duplicar este bloque para añadir más proyectos -->
       </div>
     </div>
   </section>
 
-  <!-- Skills / Soft Skills -->
-  <section id="skills" style="background:#f8f9fa;">
+  <!-- SKILLS -->
+  <section id="skills">
     <div class="container">
       <h2 class="section-title">Skills</h2>
       <div class="row justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-7">
           <ul>
-            <li>Strong analytical and critical thinking skills.</li>
-            <li>Ability to translate business needs into data & AI solutions.</li>
-            <li>Excellent communication with technical and non-technical stakeholders.</li>
+            <li>Strong analytical mindset and critical thinking.</li>
+            <li>Ability to translate business needs into data &amp; AI solutions.</li>
+            <li>Clear communication with both technical and non-technical stakeholders.</li>
             <li>Experience in agile environments (Scrum / Kanban).</li>
-            <li>Background in education and psychopedagogy, helping with teaching & mentoring.</li>
+            <li>Background in education and psychopedagogy, helping with teaching, mentoring and change management.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section id="contact">
     <div class="container">
       <h2 class="section-title">Contact</h2>
       <div class="row justify-content-center">
         <div class="col-lg-6 text-center">
-          <p>If you’d like to collaborate, talk about a project or discuss opportunities, feel free to reach out:</p>
+          <p class="mb-3">
+            If you’d like to collaborate, talk about a project or discuss opportunities,
+            feel free to reach out:
+          </p>
           <p>
             📧 <a href="mailto:jonasdemartin@gmail.com">jonasdemartin@gmail.com</a><br />
             🔗 <a href="https://www.linkedin.com/in/jonás-de-martín-rodríguez-473326397" target="_blank">LinkedIn</a><br />
@@ -236,7 +451,8 @@
   </section>
 
   <footer>
-    © <span id="year"></span> Jonás De Martín Rodríguez – Data Science & AI Portfolio
+    © <span id="year"></span> Jonás De Martín Rodríguez · Data Science &amp; AI Portfolio ·
+    <a href="https://github.com/JO-MR/Portfolio" target="_blank">View on GitHub</a>
   </footer>
 
   <script>
@@ -245,3 +461,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
